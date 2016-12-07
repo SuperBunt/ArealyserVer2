@@ -1,6 +1,7 @@
 """
 Definition of urls for LocalVersion.
 """
+from arealyser.views import property_view 
 
 from datetime import datetime
 from django.conf.urls import url
@@ -10,9 +11,9 @@ import app.forms
 import app.views
 
 # Uncomment the next lines to enable the admin:
-# from django.conf.urls import include
-# from django.contrib import admin
-# admin.autodiscover()
+from django.conf.urls import include
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = [
     # Examples:
@@ -39,8 +40,11 @@ urlpatterns = [
         name='logout'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
+
+    # View the property price register data
+    url(r'^ppr$', property_view), 
 ]

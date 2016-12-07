@@ -1,0 +1,23 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Property Price Register{% endblock %}
+
+{% block content %}
+<h1>Property Price Register</h1>
+
+<h2>Hello {{sample}}</h2>
+<div class="row">
+    <div  class="col-md-offset-2 col-md-8">
+        <table class="table table-bordered table-hover" id="year4">
+            <thead> <tr> <th>Address</th> <th>Price</th> </tr> </thead>
+            <tbody>
+                {% for row in properties %}
+                <tr> <td>{{ row.address }}</td> <td>{{row.price}}</td> </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+{% endblock %}

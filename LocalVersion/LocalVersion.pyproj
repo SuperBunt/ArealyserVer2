@@ -35,6 +35,16 @@
     <Compile Include="app\views.py" />
     <Compile Include="app\__init__.py" />
     <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="arealyser\admin.py" />
+    <Compile Include="arealyser\apps.py" />
+    <Compile Include="arealyser\migrations\__init__.py" />
+    <Compile Include="arealyser\models.py" />
+    <Compile Include="arealyser\tests.py" />
+    <Compile Include="arealyser\views.py" />
+    <Compile Include="arealyser\__init__.py" />
+    <Compile Include="LocalVersion\models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="manage.py" />
     <Compile Include="LocalVersion\__init__.py" />
     <Compile Include="LocalVersion\settings.py" />
@@ -51,9 +61,15 @@
     <Folder Include="app\static\app\scripts\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
+    <Folder Include="arealyser\" />
+    <Folder Include="arealyser\migrations\" />
+    <Folder Include="arealyser\templates\" />
     <Folder Include="LocalVersion\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="arealyser\templates\base.html" />
+    <Content Include="arealyser\templates\index.html" />
+    <Content Include="arealyser\templates\ppr.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
