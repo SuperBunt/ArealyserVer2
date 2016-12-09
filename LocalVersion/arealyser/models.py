@@ -35,6 +35,7 @@ class PPR(models.Model):
         (0, 'No'),
         (1, 'Yes')
     )
+    
     address = models.TextField('Address')
     county = models.CharField('County', max_length=10, choices=COUNTIES)
     price = models.DecimalField('Price', max_digits=12, decimal_places=2)
@@ -48,7 +49,10 @@ class PPR(models.Model):
     # latitude = models.DecimalField(max_digits=3, decimal_places=6)
 
     def __str__(self):
-        return u'Address: {0}, Price: &euro; {1}'.format(self.address, self.price) 
+        return 'Address: {0}, Price: &euro; {1}'.format(self.address, self.price) 
+
+    # def address(self):
+    #    return self.address
 
     class Meta:
         app_label = 'arealyser'
